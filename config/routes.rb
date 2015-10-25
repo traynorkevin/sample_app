@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   get 'dashboard' => 'static_pages#dashboard'
   get 'contact' => 'static_pages#contact'
+
+  resources :users
 end

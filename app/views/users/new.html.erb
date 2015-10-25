@@ -6,36 +6,33 @@
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 							<h2>Registrate en Taza</h2>
-								<form>
-								  <div class="form-group">
-								    <label for="exampleInputEmail1">Nombre</label>
-								    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
-								  </div>
-								  <div class="form-group">
-								    <label for="exampleInputEmail1">Apellido</label>
-								    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Apellido">
-								  </div>
-								  <div class="form-group">
-								    <label for="exampleInputEmail1">Email</label>
-								    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-								  </div>
-								  <div class="form-group">
-								    <label for="exampleInputPassword1">Contraseña</label>
-								    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-								  </div>
-								  <div class="form-group">
-								    <label for="exampleInputPassword1">Repetir Contraseña</label>
-								    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repetir Contraseña">
-								  </div>
-								  
-								  <div class="checkbox">
-								    <label>
-								      <input type="checkbox">Acepto los <a href="#">Términos y Condiciones</a></label>
-								  </div>
-								  <a href="activation.html">
-								  	<button type="submit" class="btn btn-default btn-lg btn-orange btn-block">Submit</button>
-								  </a>
-								</form>
+								<%= form_for(@user) do |f| %>
+									<%= render 'shared/error_messages' %>
+
+									<div class="form-group">
+								      <%= f.label :first_name, "Nombre" %>
+								      <%= f.text_field :first_name , class: 'form-control' %>
+									</div>
+									<div class="form-group">
+								      <%= f.label :last_name, "Apellido" %>
+								      <%= f.text_field :last_name , class: 'form-control' %>
+									</div>
+									<div class="form-group">
+								      <%= f.label :email, "Email" %>
+								      <%= f.email_field :email , class: 'form-control' %>
+									</div>
+									<div class="form-group">
+								      <%= f.label :password, "Contraseña" %>
+								      <%= f.password_field :password , class: 'form-control' %>
+									</div>
+									<div class="form-group">
+								      <%= f.label :password_confirmation, "Confirmar Contraseña" %>
+								      <%= f.password_field :password_confirmation , class: 'form-control' %>
+									</div>
+									
+							      <%= f.submit "Submit", class: "btn btn-default btn-lg btn-orange btn-block" %>
+								<% end %>
+								
 						</div>
 					</div>
 				</div>

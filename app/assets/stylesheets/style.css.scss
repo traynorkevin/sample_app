@@ -100,7 +100,7 @@ header {
 
 footer {
 	background-color:#296ca3;
-	margin-top:30px;
+	margin-top:15px;
 	padding: 10px 20px 0px 20px;
 	text-align: center;
 	border-top:1px solid black;
@@ -119,6 +119,11 @@ footer ul a li:hover {
 	}
 .color-white {
 	background-color:white;
+}
+
+.container-flash {
+	margin-top:10px;
+	margin-bottom:-15px;
 }
 
 /* ESTILOS PARA EL DEBUGGER */
