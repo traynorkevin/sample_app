@@ -1,3 +1,51 @@
+	<div class="container">
+		<div class="jumbotron">
+					<h2>Bienvenido a Taza</h2>
+					<p>El sitio donde se generan nuevos vínculos sociales a través de actividades, y a la vez, se promueven nuevas actividades mediante la motivación a generar nuevos vínculos sociales.</p>
+					<%= link_to "Registrate", signup_path, class: "btn btn-primary btn-orange btn-lg navbar-form-btn" %>
+					
+		</div>
+	</div>
 
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+	<div class="container">
+		<div class="jumbotron">
+			<div id="carousel-1" class="carousel slide" data-ride="carousel">
+				<!-- Inidicadores -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-1" data-slide-to="1"></li>
+					<li data-target="#carousel-1" data-slide-to="2"></li>
+				</ol>
+
+				<!--contenedor de los slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<%= image_tag("PaintballCarousel.jpg", class: "img-responsive img-rounded") %>
+						<div class="carousel-caption">
+							<h3>Paintball</h3>
+						</div>
+					</div>
+					<div class="item">
+						<%= image_tag("BungeeCarousel.jpg", class: "img-responsive img-rounded") %>
+						<div class="carousel-caption">
+							<h3>Bungee</h3>
+						</div>
+					</div>
+					<div class="item">
+						<%= image_tag("FiestaCarousel.jpg", class: "img-responsive img-rounded") %>
+						<div class="carousel-caption">
+							<h3>Fiesta</h3>
+						</div>
+					</div>
+				</div>
+				<a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
+			</div>
+		</div>
+	</div>

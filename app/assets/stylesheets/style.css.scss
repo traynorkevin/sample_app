@@ -1,0 +1,122 @@
+/*body {
+	background-color:grey;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}*/
+/*  color del header #296ca3
+	naranja de los botones: #e79700; 
+	celestito fondo: #ebf5ff
+	azul fuerte texto: #044156*/
+/*
+header {
+	background-color:#296ca3;
+}*/
+
+
+
+.navbar-header-img {
+	margin-top:-6px;
+	margin-left: 58%;
+}
+.navbar-header-form {
+	margin-right: 100px;
+}
+.navbar-header-ul {
+	margin: 8px 0px;
+}
+.form-control-correction {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.btn-correction {
+	margin-left:5px;
+}
+.btn-full-width {
+	width:100%;
+}
+.full-height {
+	height:100%;
+}
+.header-ul {
+	display:inline-block;
+	text-align: center;
+	vertical-align: bottom;
+	color:#044156;
+	padding:0 0;
+}
+.row .nav li a {
+	color:#044156;
+	top:12px;
+}
+
+@media (max-width: 767px) {
+	.navbar-header-form {
+		margin-right: 15px;
+	}
+	.navbar-header-form-btn {
+		margin-right: 15%;
+		background-color: #246089;
+	}
+	.navbar-header-img {
+		margin-left: 35%;
+	}
+	.navbar-form-btn {
+		display:inline-block;
+		width:100%;
+	}
+	.navbar-collapse-correction {
+	padding-right: 10px;
+	padding-left: 35px;
+	/*overflow-x: visible;
+	-webkit-overflow-scrolling: touch;
+	border-top: 1px solid transparent;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+	          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);*/
+}
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e79700;
+}
+
+.container .jumbotron h2 {
+	font-size: 40px;
+	margin-top: 0px;
+	color:#044156;
+}
+.container .jumbotron p {
+	color:#044156;
+	text-align: justify;
+	margin:15px 0px;
+}
+.btn-orange {
+  color: #044156;
+  background-color: #e79700;
+  border-color: #2e6da4;
+}
+.btn-orange:hover {
+  color: #044156;
+  background-color: orange;
+  border-color: #2e6da4;
+}
+
+footer {
+	background-color:#296ca3;
+	margin-top:30px;
+	padding: 10px 20px 0px 20px;
+	text-align: center;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+.footer-ul {
+	display:inline-block;
+	margin:0 20px;
+	text-align: center;
+	vertical-align: middle;
+	color:#044156;
+	list-style-type:none;
+}
+footer ul a li:hover {
+	color:#ebf5ff;
+	}
+.color-white {
+	background-color:white;
+}
