@@ -13,15 +13,47 @@
 					</div>
 
 					<div class="collapse navbar-collapse navbar-collapse-correction" id="navbar-1">
-						<form action="" class="navbar-form navbar-right navbar-header-form">
-							<div class="form-group">
-								<input type="text" class="form-control form-control-correction input-sm" placeholder="Email">
+						<% if logged_in? %>
+							<div class="row">
+								<div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset- col-md-5 col-md-offset-1 col-xl-5 col-xl-offset-1">
+									<ul class="nav navbar-nav navbar-header-ul header-ul btn-full-width text-center full-height">
+										<li><%= link_to "Dashboard", '#', class: "header-ul" %></li>
+										<li><%= link_to "Actividades", '#', class: "header-ul" %></li>
+										<li><%= link_to "Contacto", '#', class: "header-ul" %></li>
+								    </ul>
+								</div>
+								<div class="col-xs-2 col-xs-offset-1 col-sm-3 col-sm-offset-0 col-md-2 col-md-offset-1 col-xl-2 col-xl-offset-1">
+									<ul class="nav navbar-nav navbar-header-ul header-ul btn-full-width text-center full-height">
+										<li class="dropdown header-ul">
+								            <a href="#" class="dropdown-toggle align-right" data-toggle="dropdown">
+								              <%= @user.first_name %> <%= @user.last_name %> <b class="caret"></b>
+								            </a>
+								            <ul class="dropdown-menu">
+								              <li><%= link_to "Profile", current_user %></li>
+								              <li><%= link_to "Settings", '#' %></li>
+								              <li class="divider"></li>
+								              <li>
+								                <%= link_to "Log out", logout_path, method: "delete" %>
+								              </li>
+								            </ul>
+								        </li>
+									</ul>
+								</div>
+
 							</div>
-							<div class="form-group">
-								<input type="password" class="form-control form-control-correction input-sm" placeholder="Contraseña">
-							</div>
-							<button class="btn btn-default navbar-btn btn-sm navbar-form-btn btn-correction">Log In</button>
-						</form>
+						<% else %>
+
+							<%= form_for(:session, url: login_path, :html => {:class => "navbar-form navbar-right navbar-header-form"}) do |f| %>
+								<div class="form-group">
+							      <%= f.email_field :email, class: 'form-control form-control-correction input-sm', placeholder: 'Email' %>
+								</div>
+								<div class="form-group">
+							      <%= f.password_field :password, class: 'form-control form-control-correction input-sm', placeholder: 'Password' %>
+								</div>
+							      <%= f.submit "Log in", class: "btn btn-default navbar-btn btn-sm navbar-form-btn btn-correction" %>
+							<% end %>
+						<% end %>
+
 					</div>
 				</div>
 			</nav>
